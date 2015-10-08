@@ -1,0 +1,13 @@
+{{!
+Render hz-*version
+}}
+
+{{#if [x-hz-version]}}
+    <span class="hz-property-version">v{{[x-hz-version]}}</span>
+{{/if}}
+{{#if [x-hz-minimumVersion]}}
+    <span class="hz-property-version">minv{{[x-hz-minimumVersion]}}</span>
+{{/if}}
+{{#if [x-hz-maximumVersion]}}
+    <span class="hz-property-version">maxv{{[x-hz-maximumVersion]}}</span>
+{{/if}}

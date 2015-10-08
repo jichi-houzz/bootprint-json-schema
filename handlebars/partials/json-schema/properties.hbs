@@ -7,6 +7,7 @@
                 {{!Single property, default type is "object"}}
                 <span class="json-property-name">{{@key}}:</span>
                 {{>json-schema/datatype}}
+                {{>json-schema/version}}
                 {{#ifcontains ../required @key}}
                     <span class="json-property-required"></span>
                 {{/ifcontains}}
