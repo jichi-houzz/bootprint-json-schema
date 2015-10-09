@@ -18,7 +18,7 @@
     {{/if}}
     {{#if [x-hz-version]}}
         <div id="hz-schema-version" class="json-schema-default-value">
-            <span class="json-schema-default-value-header">Version:</span>
+            <span class="json-schema-default-value-header">Latest version:</span>
             {{[x-hz-version]}}
         </div>
     {{/if}}
@@ -36,7 +36,7 @@
     {{/if}}
     {{#if [x-hz-versions]}}
         <div id="hz-schema-versions" class="json-schema-default-value">
-            <span class="json-schema-default-value-header">Update versions:</span>
+            <span class="json-schema-default-value-header">All versions:</span>
             {{#each [x-hz-versions]}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
         </div>
     {{/if}}
