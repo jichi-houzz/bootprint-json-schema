@@ -1,0 +1,43 @@
+{{!--
+    Renders the information section of a schema definition.
+    @api public
+    @author jichi
+--}}
+<section class="json-schema-information">
+    {{#if [x-hz-author]}}
+        <div id="hz-schema-author" class="json-schema-default-value">
+            <span class="json-schema-default-value-header">Author:</span>
+            <a href="mailto:{{[x-hz-author]}}">{{[x-hz-author]}}</a>
+        </div>
+    {{/if}}
+    {{#if [x-hz-source]}}
+        <div id="hz-schema-source" class="json-schema-default-value">
+            <span class="json-schema-default-value-header">Source:</span>
+            <a href="{{[x-hz-source]}}" target="_blank">{{[x-hz-source]}}</a>
+        </div>
+    {{/if}}
+    {{#if [x-hz-version]}}
+        <div id="hz-schema-version" class="json-schema-default-value">
+            <span class="json-schema-default-value-header">Version:</span>
+            {{[x-hz-version]}}
+        </div>
+    {{/if}}
+    {{#if [x-hz-minimumVersion]}}
+        <div id="hz-schema-version" class="json-schema-default-value">
+            <span class="json-schema-default-value-header">Minimum version:</span>
+            {{[x-hz-minimumVersion]}}
+        </div>
+    {{/if}}
+    {{#if [x-hz-maximumVersion]}}
+        <div id="hz-schema-version" class="json-schema-default-value">
+            <span class="json-schema-default-value-header">Maximum version:</span>
+            {{[x-hz-maximumVersion]}}
+        </div>
+    {{/if}}
+    {{#if [x-hz-versions]}}
+        <div id="hz-schema-versions" class="json-schema-default-value">
+            <span class="json-schema-default-value-header">Update versions:</span>
+            {{#each [x-hz-versions]}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
+        </div>
+    {{/if}}
+</section>
